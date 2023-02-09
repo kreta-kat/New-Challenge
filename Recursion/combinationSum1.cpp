@@ -3,9 +3,9 @@ using namespace std;
 
 void findCombination(int ind, int target, vector<int> &arr, vector<int> &ds, vector<vector<int>> &ans)
 {
-    vector<vector<int>> res;
+    //vector<vector<int>> res;
     //base condition
-    if(arr[ind] == arr.size())
+    if(ind == arr.size())
     {
         if(target == 0)
         {
@@ -30,13 +30,16 @@ void findCombination(int ind, int target, vector<int> &arr, vector<int> &ds, vec
 
 int main(void)
 {
-    vector<int> arr = {2,2,6,7};
+    vector<int> arr = {2,2,3,7};
     int target =7;
     vector<int> ds;
     vector<vector<int>> ans;
     findCombination(0,target,arr,ds,ans);
-    cout<<ans.size()<<endl;
-    /*for(int i =0; i<ans.size(); i++)
+    //cout<<ans.size()<<endl;
+    vector<vector<int>> :: iterator itr;
+    itr = unique(ans.begin(), ans.end());
+    ans.resize(distance(ans.begin(), itr));
+    for(int i =0; i<ans.size(); i++)
     {
         for(auto it = ans[i].begin(); it != ans[i].end();it++)
     {
@@ -44,7 +47,7 @@ int main(void)
     }
         cout<<endl;
     }
-    */
+    
 
     return 0;
 
