@@ -22,3 +22,16 @@ int isCyclicRotation(string &p, string &q)
 
 //left roation formula
 //rotate(v.begin(),v.begin()+i,v.end());
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    //optimal solution
+    #include <bits/stdc++.h> 
+int isCyclicRotation(string &p, string &q) 
+{
+    //    Write your code here
+    string temp=p+p;
+    size_t f = temp.find(q);
+    if(f != string::npos)
+    {return 1;}
+    else
+    return 0;
+}
