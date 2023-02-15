@@ -28,7 +28,7 @@ void func(int index, string s, vector<string> &path, vector<vector<string>> &ans
             //pushing the substring in path vector
             //substring from index to i-index+1 say(0-1) where index =0; 0-0+1 =1  it means SIZE OF substring
             path.push_back(s.substr(index, i-index+1));
-            func(index+1, s, path,ans);
+            func(i+1, s, path,ans);
             //removing path for other partitioning
             path.pop_back();
 
