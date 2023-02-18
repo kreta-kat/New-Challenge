@@ -11,6 +11,7 @@ int printSum(int ind, int arr[], int n, int sum, int s)
        return 0;
     }
     //adding that letter to sum so that it can be checked in the condition
+    //here we are doing it to check condition
     s += arr[ind];
     //case for picking the element (in the subsequence and) no. added in sum
     int l = printSum(ind+1,arr,n,sum,s);
