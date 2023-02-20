@@ -1,4 +1,4 @@
-//print linearly from 1 to n BACKTRACKING
+//print linearly from 1 to n BACKTRACKING using
 #include<iostream>
 using namespace std;
 
