@@ -1,3 +1,4 @@
+//armstrong
 #include<iostream>
 using namespace std;
 
